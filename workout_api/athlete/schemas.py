@@ -10,3 +10,7 @@ class Athlete(BaseSchemas):
     weight: Annotated[PositiveFloat, Field(description='Weight of the athlete', example='50.8')]
     height: Annotated[PositiveFloat, Field(description='Heigth of the athlete', example='1.70')]
     gender: Annotated[str, Field(description='athletes gender', example='M', max_length=1)]
+
+
+class AtlheteOut(Athlete, OutMixin):
+    pass
